@@ -1,128 +1,272 @@
-:root{
-  --cor-de-fundo: #27445D;
-  --cor-de-texto:#EFE9D5;
-  --cor-texto-dois:#71BBB2;
-}
-
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.logo-titulo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-.logo-titulo img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+h2 {
+    font-size: 2em;
+    color: #555;
+    margin-top: 0;
 }
 
-nav .menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+.illustration-container {
+    width: 900px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+/* Farm (Barn) */
+.farm {
+    position: absolute;
+    left: 80px;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.menu li a:hover {
-  color: #ffcc00;
+.barn {
+    width: 100%;
+    height: 100px;
+    background-color: #e74c3c; /* Red color */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+.barn::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 50px solid #e74c3c; /* Red roof */
+}
+
+.cross {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    transform: rotate(45deg);
+    top: 70px;
+}
+
+/* Wheat */
+.wheat {
+    position: absolute;
+    left: 280px;
+    bottom: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.stalk {
+    width: 15px;
+    height: 150px;
+    background-color: #f1c40f; /* Yellow color */
+    border-radius: 50%;
+    transform: rotate(-10deg);
+}
+
+.stalk.s2 {
+    height: 160px;
+    transform: rotate(0deg);
+}
+
+.stalk.s3 {
+    height: 140px;
+    transform: rotate(10deg);
 }
 
 
-.titulo {
-  background-color: #eee;
-  padding: 40px;
-  text-align: center;
+/* School Bus */
+.school-bus {
+    position: absolute;
+    left: 400px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.banner-principal img {
-  width: 100%;
-  display: block;
+.bus-body {
+    width: 180px;
+    height: 80px;
+    background-color: #f1c40f; /* Yellow */
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
 }
 
-.conteudo {
-  display: flex;
-  align-items: center;
-  padding: 40px 20px;
-  gap: 20px;
+.bus-body .text {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.conteudo.invertido {
-  flex-direction: row-reverse;
+.bus-body .windows {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 10px;
 }
 
-.conteudo img {
-  width: 40%;
-  height: auto;
-  border-radius: 8px;
+.bus-body .window {
+    width: 30px;
+    height: 20px;
+    background-color: #87ceeb; /* Light blue for windows */
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #333;
 }
 
-.texto {
-  width: 60%;
+.wheels {
+    display: flex;
+    gap: 60px;
+    margin-top: -5px;
 }
 
-.galeria {
-  padding: 40px 20px;
-  text-align: center;
-  background: #f9f9f9;
+.wheel {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    border: 2px solid #555;
 }
 
-.grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+/* School */
+.school {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.seis-imagens {
-  padding: 40px 20px;
-  text-align: center;
+.school-building {
+    width: 200px;
+    height: 150px;
+    background-color: #ecf0f1; /* Light gray */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.grid-destaques {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.school-building .text {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    background-color: #f1c40f; /* Yellow stripe */
+    padding: 2px 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-.grid-destaques .item {
-  text-align: center;
-  width: 150px;
+.school-windows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin-top: 30px;
 }
 
-.grid-destaques img {
-  width: 100%;
-  border-radius: 8px;
+.school-window {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    position: relative;
+}
+
+.school-window::before,
+.school-window::after {
+    content: '';
+    position: absolute;
+    background-color: #333;
+}
+
+.school-window::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.school-window::after {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.school-front {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.door {
+    width: 40px;
+    height: 60px;
+    background-color: #a0522d; /* Brown for doors */
+    border: 1px solid #333;
 }
 
 footer {
-  background-color: #444;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #777;
+}
 }
