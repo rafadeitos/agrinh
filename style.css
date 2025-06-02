@@ -14,6 +14,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 h1 {
@@ -311,4 +312,8 @@ body {
 
 .main-nav a:hover {
     color: #ffd700; /* Cor do texto ao passar o mouse */
+}
+.texto{
+    margin-left:;
+    margin-right: ;
 }
