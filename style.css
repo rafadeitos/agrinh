@@ -269,4 +269,46 @@ footer {
     font-size: 1.2em;
     color: #777;
 }
+/* Estilos básicos para o corpo da página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para o cabeçalho principal */
+.main-header {
+    display: flex; /* Permite alinhar itens lado a lado */
+    justify-content: space-between; /* Espaça a logo e a navegação */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 15px 20px;
+    background-color: #333; /* Cor de fundo escura para o cabeçalho */
+    color: white;
+}
+
+/* Estilo para a logo */
+.logo img {
+    max-height: 50px; /* Define uma altura máxima para a logo */
+}
+
+/* Estilo para a navegação */
+.main-nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Faz com que os itens da lista fiquem lado a lado */
+}
+
+.main-nav li {
+    margin-left: 20px; /* Espaçamento entre os itens da navegação */
+}
+
+.main-nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto dos links */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+}
+
+.main-nav a:hover {
+    color: #ffd700; /* Cor do texto ao passar o mouse */
 }
